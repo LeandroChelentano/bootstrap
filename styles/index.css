@@ -1,0 +1,54 @@
+:root {
+  font-family: "Poppins", sans-serif;
+}
+
+#logo {
+  height: 80px;
+  margin: 5px 20px;
+}
+
+header {
+  text-align: center;
+  color: #fff;
+  background-color: black;
+}
+
+header p {
+  padding: 7px;
+}
+
+header p strong a {
+  color: #fff;
+}
+
+.container-fluid,
+.container,
+nav,
+.col-12 {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  width: 100%;
+  margin: 0;
+}
+
+.navbar-toggler {
+  margin-right: 20px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.separator-big {
+  height: 80px;
+}
+
+.separator-small {
+  height: 10px;
+}

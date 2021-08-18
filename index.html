@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Inicio - Indumentis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="domains/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="styles/index.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="styles/home.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <nav
+            class="navbar navbar-expand-lg navbar-light bg-light"
+            aria-label="Third navbar example"
+            style="gap: 0px"
+          >
+            <img src="imgs/logo.png" class="navbar-brand" id="logo" />
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarsExample03"
+              aria-controls="navbarsExample03"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+              <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                <li class="nav-item">
+                  <a class="nav-link active ps-4" href="#">Conocenos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ps-4" href="#"
+                    >Trajes y Zapatos</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ps-4" href="#"
+                    >Vestidos y Tacones</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ps-4" href="#">Demoras</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ps-4" href="htmls/location.html">Ubicacion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ps-4" href="#">Reservar</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <header>
+            <p>
+              Ofertas de hasta 35% - <strong><a href="#">VER AQUI</a></strong>
+            </p>
+          </header>
+        </div>
+      </div>
+
+      <!-- Separador chico -->
+      <div class="row separator-small d-block d-lg-none">
+        <div class="col-12 separator-small d-block d-md-none"></div>
+      </div>
+      
+      <!-- Separador grande -->
+      <div class="row separator-big d-none d-lg-block">
+        <div class="col-12 separator-big d-none d-md-block"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-10 offset-1" style="padding: 1px;">
+          <main>
+            <!-- WELCOME -->
+            <div class="container-fluid">
+              <!-- Para dispositivos grandes -->
+              <div class="row d-none d-lg-flex">
+                <div class="col-6 center m-0">
+                  <!-- Video -->
+                  <div id="left center">
+                    <div id="vidHolder">
+                      <video
+                        id="video"
+                        autoplay="autoplay"
+                        playsinline
+                        muted
+                        loop
+                        style="pointer-events: none"
+                        title="Video Coleccion Primavera-Verano"
+                        alt="Video donde se muetra la coleccion de primavera verano"
+                      >
+                        <source
+                          src="../vids/Never Gonna Give You Up.mp4"
+                          type="video/mp4"
+                        />
+                        <source
+                          src="../vids/Never-Gonna-Give-You-Up.ogg"
+                          type="video/ogg"
+                        />
+                      </video>
+                    </div>
+                  </div>
+                </div>
+                <!-- Texto -->
+                <div class="col-6">
+                  <main>
+                    <p id="homeT" class="welcomeTitle mt-0">
+                      <strong>Coleccion Primavera - Verano</strong>
+                    </p>
+                    <p id="welcomeDesc" class="welcomeDesc">
+                      Aliquip nulla eiusmod nisi cupidatat sunt commodo qui
+                      dolor excepteur ipsum sint laboris. Nulla mollit irure
+                      commodo ipsum velit elit cillum incididunt. Ut voluptate
+                      excepteur in ipsum. In duis Lorem irure cupidatat aute ex
+                      labore laboris pariatur veniam eu. Duis cillum dolore
+                      ullamco cillum.
+                    </p>
+                    <button
+                      class="welcomeBtn"
+                      id="welcomeBtn"
+                      onclick="window.open('', '_self')"
+                    >
+                      <strong>VER CATALOGO ></strong>
+                    </button>
+                    <br>
+                    <br>
+                  </main>
+                </div>
+              </div>
+              <!-- Para dispositivos chicos -->
+              <div class="row d-lg-none">
+                <div class="col-12">
+                  <p id="homeT" class="welcomeTitle center">
+                    <strong>Coleccion Primavera - Verano</strong>
+                  </p>
+                  <div id="left">
+                    <div id="vidHolder">
+                      <video
+                        id="video"
+                        autoplay="autoplay"
+                        playsinline
+                        muted
+                        loop
+                        style="pointer-events: none"
+                        title="Video Coleccion Primavera-Verano"
+                        alt="Video donde se muetra la coleccion de primavera verano"
+                      >
+                        <source
+                          src="../vids/Never Gonna Give You Up.mp4"
+                          type="video/mp4"
+                        />
+                        <source
+                          src="../vids/Never-Gonna-Give-You-Up.ogg"
+                          type="video/ogg"
+                        />
+                      </video>
+                    </div>
+                  </div>
+                  <p id="welcomeDesc" class="welcomeDesc mt-3">
+                    Aliquip nulla eiusmod nisi cupidatat sunt commodo qui dolor
+                    excepteur ipsum sint laboris. Nulla mollit irure commodo
+                    ipsum velit elit cillum incididunt. Ut voluptate excepteur
+                    in ipsum. In duis Lorem irure cupidatat aute ex labore
+                    laboris pariatur veniam eu. Duis cillum dolore ullamco
+                    cillum.
+                  </p>
+                  <button
+                    class="welcomeBtn"
+                    id="welcomeBtn"
+                    onclick="window.open('', '_self')"
+                  >
+                    <strong>VER CATALOGO ></strong>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+
+      <!-- Separador chico -->
+      <div class="row separator-small d-block d-md-none">
+        <div class="col-12 separator-small d-block d-md-none"></div>
+      </div>
+
+      <div class="row">
+        <section>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-10 offset-1 col-md-4 offset-md-2 col-lg-2 offset-lg-2 mt-5 mt-md-5">
+                <div class="card border border-dark rounded m-2">
+                  <img
+                    class="card-images"
+                    src="../imgs/clothes/Ribbed Jersey Dress.png"
+                    alt="Mujer con vestido marron mirando a camara sosteniendo su cabeza."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title" title="Ribbed Jersey Dress">
+                      Ribbed Jersey Dress
+                    </h5>
+                    <p class="card-price">$12.99</p>
+                    <a href="../presentation/catalogo.html" class="btn btn-primary"
+                      >Ver</a
+                    >
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-10 offset-1 col-md-4 offset-md-0 col-lg-2 offset-lg-0 mt-md-5">
+                <div class="card border border-dark rounded m-2">
+                  <img
+                    class="card-images"
+                    src="../imgs/clothes/Ribbed Jersey Dress.png"
+                    alt="Mujer con vestido marron mirando a camara sosteniendo su cabeza."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title" title="Ribbed Jersey Dress">
+                      Ribbed Jersey Dress
+                    </h5>
+                    <p class="card-price">$12.99</p>
+                    <a href="../presentation/catalogo.html" class="btn btn-primary"
+                      >Ver</a
+                    >
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-10 offset-1 col-md-4 offset-md-2 col-lg-2 offset-lg-0 mt-lg-5">
+                <div class="card border border-dark rounded m-2">
+                  <img
+                    class="card-images"
+                    src="../imgs/clothes/Ribbed Jersey Dress.png"
+                    alt="Mujer con vestido marron mirando a camara sosteniendo su cabeza."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title" title="Ribbed Jersey Dress">
+                      Ribbed Jersey Dress
+                    </h5>
+                    <p class="card-price">$12.99</p>
+                    <a href="../presentation/catalogo.html" class="btn btn-primary"
+                      >Ver</a
+                    >
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-10 offset-1 col-md-4 offset-md-0 col-lg-2 offset-lg-0 mt-lg-5">
+                <div class="card border border-dark rounded m-2">
+                  <img
+                    class="card-images"
+                    src="../imgs/clothes/Ribbed Jersey Dress.png"
+                    alt="Mujer con vestido marron mirando a camara sosteniendo su cabeza."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title" title="Ribbed Jersey Dress">
+                      Ribbed Jersey Dress
+                    </h5>
+                    <p class="card-price">$12.99</p>
+                    <a href="../presentation/catalogo.html" class="btn btn-primary"
+                      >Ver</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Separador chico -->
+      <div class="row separator-small d-block d-md-none">
+        <div class="col-12 separator-small d-block d-md-none"></div>
+      </div>
+      
+      <!-- Separador grande -->
+      <div class="row separator-big d-none d-md-block">
+        <div class="col-12 separator-big d-none d-md-block"></div>
+      </div>
+
+    </div>
+    <!-- end of main container -->
+
+  </body>
+</html>
