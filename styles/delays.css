@@ -1,0 +1,43 @@
+table,
+td,
+tr,
+th {
+  text-align: center;
+  padding: 10px;
+
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+thead {
+  font-weight: bolder;
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+#table {
+  grid-area: table;
+  width: 100%;
+  height: fit-content;
+  overflow-x: scroll;
+}
+
+.texto {
+  font-size: 1.1rem;
+}
+
+.separator-big {
+  height: 40px;
+}
+
+.separator-small {
+  height: 10px;
+}
