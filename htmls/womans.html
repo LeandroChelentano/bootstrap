@@ -44,8 +44,9 @@
       href="../styles/cat.css"
     />
     <script src="../domains/main.js"></script>
+    <script src="../domains/data.js"></script>
   </head>
-  <body>
+  <body onload="loadWomans()">
     <div class="container-fluid">
       <!-- NAV -->
       <div class="row">
@@ -98,11 +99,6 @@
                     >Ubicacion</a
                   >
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link active ps-4" href="booking.html"
-                    >Reservar</a
-                  >
-                </li>
               </ul>
             </div>
           </nav>
@@ -126,14 +122,18 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-12">
-                  <p class="cat">Vestidos y Tacones para Damas </p>
+                  <p class="cat">Vestidos y Tacones para Damas</p>
                   <p class="results">56.326 resultados</p>
 
                   <p class="high">Categorias</p>
                   <!--  -->
                   <p class="lav">Vestido clasico <b class="qunt">(9.677)</b></p>
-                  <p class="lav">Vestido con cola <b class="qunt">(9.600)</b></p>
-                  <p class="lav">Vestido asimetrico <b class="qunt">(8.846)</b></p>
+                  <p class="lav">
+                    Vestido con cola <b class="qunt">(9.600)</b>
+                  </p>
+                  <p class="lav">
+                    Vestido asimetrico <b class="qunt">(8.846)</b>
+                  </p>
                   <p class="lav">Tacones altos <b class="qunt">(11.386)</b></p>
                   <p class="lav">Tacones bajos <b class="qunt">(7.893)</b></p>
                   <p class="more">Ver todos</p>
@@ -156,7 +156,7 @@
           </aside>
         </div>
 
-        <div class="col-12 col-md-9">
+        <div class="col-12 col-md-9 col-lg-10">
           <main>
             <div class="container-fluid">
               <div class="row">
@@ -167,8 +167,9 @@
                     flex-wrap flex-row
                     justify-content-center
                   "
+                  id="articlesHolder"
                 >
-                  <article onclick="alert('Se iria al articulo seleccionado')">
+                  <!-- <article onclick="alert('Se iria al articulo seleccionado')">
                     <img
                       src="../imgs/clothes/Rib-knit-Dress-Black.png"
                       class="artCover"
@@ -329,7 +330,7 @@
                     <div class="separator"></div>
                     <p class="artTitle">Rib Kint Dress</p>
                     <p class="artPrice">U$S 120</p>
-                  </article>
+                  </article> -->
                 </div>
               </div>
             </div>
@@ -357,7 +358,7 @@
     <div class="container-fluid" id="filterMobile">
       <div class="row">
         <div class="col-12 p-2">
-          <p class="Ncat">Vestidos y Tacones para Damas </p>
+          <p class="Ncat">Vestidos y Tacones para Damas</p>
           <p class="Nresults">56.326 resultados</p>
         </div>
       </div>

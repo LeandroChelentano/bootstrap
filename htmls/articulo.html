@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Articulo - Indumentis</title>
+    <meta
+      name="description"
+      content="Alquiler de indumentaria para fiestas en Los Angeles y Reino Unido. Prendas del mas alto nivel, incluidos ultimos lanzamientos de marcas como Gucci, Versace, Prada o Chanel."
+    />
+    <meta name="author" content="Leandro Chelentano, Nicolas Gutierrez." />
+    <meta name="revist-after" content="2 days" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="../domains/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../styles/index.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../styles/art.css"
+    />
+    <script src="../domains/main.js"></script>
+    <script src="../domains/data.js"></script>
+  </head>
+  <body onload="loadArticle()">
+    <div class="container-fluid">
+      <!-- NAV -->
+      <div class="row">
+        <div class="col-12">
+          <nav
+            class="navbar navbar-expand-lg navbar-light bg-light"
+            aria-label="Third navbar example"
+            style="gap: 0px"
+          >
+            <img
+              src="../imgs/logo.png"
+              class="navbar-brand"
+              id="logo"
+              onclick="window.open('../index.html', '_self')"
+            />
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarsExample03"
+              aria-controls="navbarsExample03"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+              <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                <li class="nav-item">
+                  <a class="nav-link active ps-4" href="about.html"
+                    >Conocenos</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ps-4" href="mens.html"
+                    >Trajes y Zapatos</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ps-4" href="womans.html"
+                    >Vestidos y Tacones</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ps-4" href="delays.html">Demoras</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ps-4" href="location.html"
+                    >Ubicacion</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- OFFERS -->
+      <div class="row">
+        <div class="col-12">
+          <header>
+            <p>
+              Ofertas de hasta 35% - <strong><a href="#">VER AQUI</a></strong>
+            </p>
+          </header>
+        </div>
+      </div>
+
+      <div class="row mt-1 mt-md-3 mt-lg-5">
+        <div class="col-4 offset-lg-2">
+          <main>
+            <div class="container-fluid">
+              <div class="row">
+                <!-- PRODUCTO Y DETALLES -->
+                <!-- Se recibe ID de producto -->
+                <div class="col-7 p-4 d-flex justify-content-center border">
+                  <img src="" id="image" alt="Producto" />
+                </div>
+
+                <div class="col-5 p-4">
+                  <p id="title"></p>
+                  <p id="desc"></p>
+                  <p class="shiping">Envio gratuito</p>
+                  <p id="price"></p>
+
+                  <button id="reservar" class="btn btn-primary" onclick="toggleFrm()">Reservar</button>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+
+        <div class="col-4">
+          <aside>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="formHolder col-12 border">
+                  <div id="waitingHolder" class="center">
+                    <p id="waiting" class="waiting p-5">Esperamos tu reserva!</p>
+                  </div>
+                  
+                  <form id="frm" action="" method="" class="p-5" style="display: none;">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12 fr">
+                          <caption>
+                            <p class="frmTitle">Su reserva:</p>
+                          </caption>
+                        </div>
+                        
+                        <div class="col-12 fr">
+                          <label for="nombre" class="form-label">Nombre y Apellido:<b class="req">*</b></label>
+                          <input type="text" id="nombre" class="form-control" required>
+                        </div>
+                        
+                        <div class="col-12 col-md-6 fr">
+                          <label for="email" class="form-label">Correo electronico:<b class="req">*</b></label>
+                          <input type="email" id="email" class="form-control" placeholder="tunombre@ejemplo.com" required>
+                        </div>
+
+                        <div class="col-12 col-md-6 fr">
+                          <label for="pass" class="form-label">Contraseña:<b class="req">*</b></label>
+                          <input type="password" id="pass" class="form-control" data-minlength="8" data-maxlength="40" required>
+                        </div>
+                        
+                        <div class="col-12 fr">
+                          <label for="date" class="form-label">Fecha:<b class="req">*</b></label>
+                          <input type="date" id="date" class="form-control" required>
+                        </div>
+                        
+                        <div class="col-12 fr">
+                          <label for="talla" class="form-label">Talla:<b class="req">*</b></label>
+                          <input type="number" id="talla" min="20" max="100" data-bind="value:talla" placeholder="20 - 100" class="form-control"  required/>
+                        </div>
+                        
+                        <div class="col-12 col-md-6 form-check fr mb-0">
+                          <p class="frmSub">Accesorios adicionales:</p>
+                          <input class="form-check-input ms-3" type="checkbox" value="" id="corbata">
+                          <label for="corbata" class="form-label">&nbsp;&nbsp;Corbata</label><br>
+                          <input class="form-check-input ms-3" type="checkbox" value="" id="smoking">
+                          <label for="smoking" class="form-label">&nbsp;&nbsp;Smoking</label><br>
+                          <input class="form-check-input ms-3" type="checkbox" value="" id="panuelo">
+                          <label for="panuelo" class="form-label">&nbsp;&nbsp;Pañuelo</label>
+                        </div>
+
+                        <div class="col-12 col-md-6 form-check fr mb-0">
+                          <p class="frmSub">Dias de reserva:<b class="req">*</b></p>
+                          <input class="form-check-input ms-3" type="radio" name="dias" id="unDia" checked>
+                          <label class="form-check-label" for="unDia">1 Dia</label><br>
+                          <input class="form-check-input ms-3" type="radio" name="dias" id="dosDias">
+                          <label class="form-check-label" for="dosDias">2 Dias</label>
+                        </div>
+
+                        <div class="col-12 fr">
+                          <label for="email" class="form-label">Sucursal de retiro:<b class="req">*</b></label>
+                          <select class="form-select" aria-label="Seleccion de sucursal de retiro" required>
+                            <option selected>Seleccione una sucursal..</option>
+                            <option value="LA">Los Angeles</option>
+                            <option value="UK">Reino Unido</option>
+                          </select>
+                        </div>
+
+                        <div class="col-12 fr">
+                          <label for="anotaciones" class="form-label">Anotaciones:</label>
+                          <textarea class="form-control" id="anotaciones" rows="3" style="resize: none;"></textarea>
+                        </div>
+
+                        <div class="col-12 center fr pb-0">
+                          <input type="submit" class="btn btn-primary" value="Confirmar">
+                        </div>
+
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -44,8 +44,9 @@
       href="../styles/cat.css"
     />
     <script src="../domains/main.js"></script>
+    <script src="../domains/data.js"></script>
   </head>
-  <body>
+  <body onload="loadMens()">
     <div class="container-fluid">
       <!-- NAV -->
       <div class="row">
@@ -96,11 +97,6 @@
                 <li class="nav-item">
                   <a class="nav-link active ps-4" href="location.html"
                     >Ubicacion</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active ps-4" href="booking.html"
-                    >Reservar</a
                   >
                 </li>
               </ul>
@@ -157,175 +153,178 @@
           </aside>
         </div>
 
-        <div class="col-12 col-md-9">
+        <div class="col-12 col-md-9 col-lg-10">
           <main>
             <div class="container-fluid">
               <div class="row">
                 <!-- aqui lo cortado -->
 
-                <div class="col-12 d-flex flex-wrap flex-row justify-content-center">
-                    <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Chaque-Azul-Marino-Chaleco-Recto.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Chaque Azul Marino</p>
-                        <p class="artPrice">U$S 135</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Chaque-Azul-Tinta-Chaleco-Recto.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Chaque Azul Marino</p>
-                        <p class="artPrice">U$S 135</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Traje-Azul-Marino-Camisa-Blanca.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Traje Azul Marino</p>
-                        <p class="artPrice">U$S 120</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Traje-Azul-Tinta-Corbata-Azul-2.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Traje Azul Tinta</p>
-                        <p class="artPrice">U$S 120</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Traje-Gris-Marengo-Camisa-Blanca.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Traje Gris Marengo</p>
-                        <p class="artPrice">U$S 120</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Traje-Negro-Camisa-Blanca.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Traje Negro</p>
-                        <p class="artPrice">U$S 120</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Chaque-Azul-Marino-Chaleco-Recto.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Chaque Azul Marino</p>
-                        <p class="artPrice">U$S 135</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Chaque-Azul-Tinta-Chaleco-Recto.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Chaque Azul Marino</p>
-                        <p class="artPrice">U$S 135</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Traje-Azul-Marino-Camisa-Blanca.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Traje Azul Marino</p>
-                        <p class="artPrice">U$S 120</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Traje-Azul-Tinta-Corbata-Azul-2.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Traje Azul Tinta</p>
-                        <p class="artPrice">U$S 120</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Traje-Gris-Marengo-Camisa-Blanca.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Traje Gris Marengo</p>
-                        <p class="artPrice">U$S 120</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Traje-Negro-Camisa-Blanca.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Traje Negro</p>
-                        <p class="artPrice">U$S 120</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Chaque-Azul-Marino-Chaleco-Recto.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Chaque Azul Marino</p>
-                        <p class="artPrice">U$S 135</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Chaque-Azul-Tinta-Chaleco-Recto.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Chaque Azul Marino</p>
-                        <p class="artPrice">U$S 135</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Traje-Azul-Marino-Camisa-Blanca.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Traje Azul Marino</p>
-                        <p class="artPrice">U$S 120</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Traje-Azul-Tinta-Corbata-Azul-2.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Traje Azul Tinta</p>
-                        <p class="artPrice">U$S 120</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Traje-Gris-Marengo-Camisa-Blanca.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Traje Gris Marengo</p>
-                        <p class="artPrice">U$S 120</p>
-                      </article>
-                      <article onclick="alert('Se iria al articulo seleccionado')">
-                        <img
-                          src="../imgs/clothes/Traje-Negro-Camisa-Blanca.jpg"
-                          class="artCover"
-                        />
-                        <div class="separator"></div>
-                        <p class="artTitle">Traje Negro</p>
-                        <p class="artPrice">U$S 120</p>
-                      </article>
+                <div id="articlesHolder" class="col-12 d-flex flex-wrap flex-row justify-content-center">
+                    
+                  <!-- <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Chaque-Azul-Marino-Chaleco-Recto.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Chaque Azul Marino</p>
+                    <p class="artPrice">U$S 135</p>
+                  </article>
+                  
+                  <article id="0" onclick="goTo(this.id)">
+                    <img
+                      src="../imgs/clothes/Chaque-Azul-Tinta-Chaleco-Recto.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Chaque Azul Marino</p>
+                    <p class="artPrice">U$S 135</p>
+                  </article>
+
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Traje-Azul-Marino-Camisa-Blanca.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Traje Azul Marino</p>
+                    <p class="artPrice">U$S 120</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Traje-Azul-Tinta-Corbata-Azul-2.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Traje Azul Tinta</p>
+                    <p class="artPrice">U$S 120</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Traje-Gris-Marengo-Camisa-Blanca.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Traje Gris Marengo</p>
+                    <p class="artPrice">U$S 120</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Traje-Negro-Camisa-Blanca.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Traje Negro</p>
+                    <p class="artPrice">U$S 120</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Chaque-Azul-Marino-Chaleco-Recto.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Chaque Azul Marino</p>
+                    <p class="artPrice">U$S 135</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Chaque-Azul-Tinta-Chaleco-Recto.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Chaque Azul Marino</p>
+                    <p class="artPrice">U$S 135</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Traje-Azul-Marino-Camisa-Blanca.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Traje Azul Marino</p>
+                    <p class="artPrice">U$S 120</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Traje-Azul-Tinta-Corbata-Azul-2.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Traje Azul Tinta</p>
+                    <p class="artPrice">U$S 120</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Traje-Gris-Marengo-Camisa-Blanca.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Traje Gris Marengo</p>
+                    <p class="artPrice">U$S 120</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Traje-Negro-Camisa-Blanca.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Traje Negro</p>
+                    <p class="artPrice">U$S 120</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Chaque-Azul-Marino-Chaleco-Recto.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Chaque Azul Marino</p>
+                    <p class="artPrice">U$S 135</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Chaque-Azul-Tinta-Chaleco-Recto.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Chaque Azul Marino</p>
+                    <p class="artPrice">U$S 135</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Traje-Azul-Marino-Camisa-Blanca.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Traje Azul Marino</p>
+                    <p class="artPrice">U$S 120</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Traje-Azul-Tinta-Corbata-Azul-2.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Traje Azul Tinta</p>
+                    <p class="artPrice">U$S 120</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Traje-Gris-Marengo-Camisa-Blanca.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Traje Gris Marengo</p>
+                    <p class="artPrice">U$S 120</p>
+                  </article>
+                  <article onclick="alert('Se iria al articulo seleccionado')">
+                    <img
+                      src="../imgs/clothes/Traje-Negro-Camisa-Blanca.jpg"
+                      class="artCover"
+                    />
+                    <div class="separator"></div>
+                    <p class="artTitle">Traje Negro</p>
+                    <p class="artPrice">U$S 120</p>
+                  </article> -->
                 </div>
               </div>
             </div>

@@ -1,0 +1,56 @@
+.artTitle {
+    font-size: 2rem;
+    margin-top: 0px;
+}
+
+.artDesc {
+    font-size: 1.2rem;
+    margin: 20px 0px;
+    color: #545454;
+}
+
+.artImg {
+    width: 90%;
+}
+
+.artPrice {
+    font-size: 1.9rem;
+}
+
+.shiping {
+    color: green;
+    font-size: 1.2rem;
+    margin: 5px 0px;
+}
+
+.waiting {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.formHolder {
+    height: fit-content
+}
+
+#waitingHolder {
+    width: 100%;
+    height: 100%;
+}
+
+.fr {
+    padding: 10px;
+}
+
+.req {
+    color: red;
+}
+
+
+
+
+
+.frmTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
