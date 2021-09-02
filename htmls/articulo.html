@@ -60,6 +60,7 @@
               src="../imgs/logo.png"
               class="navbar-brand"
               id="logo"
+              aria-label="Indumentis Logo"
               onclick="window.open('../index.html', '_self')"
             />
             <button
@@ -77,7 +78,9 @@
             <div class="collapse navbar-collapse" id="navbarsExample03">
               <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                 <li class="nav-item">
-                  <a class="nav-link active ps-4" href="../index.html">Inicio</a>
+                  <a class="nav-link active ps-4" href="../index.html"
+                    >Inicio</a
+                  >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active ps-4" href="about.html"
@@ -99,7 +102,8 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active ps-4" href="location.html"
-                    >Ubicacion</a>
+                    >Ubicacion</a
+                  >
                 </li>
               </ul>
             </div>
@@ -111,21 +115,29 @@
       <div class="row">
         <div class="col-12">
           <header>
-            <p tabindex="0">
-              Ofertas de hasta 35% - <strong><a href="mens.html">VER AQUI</a></strong>
-            </p>
+            <h1 tabindex="0">
+              Ofertas de hasta 35% -
+              <strong><a href="mens.html">VER AQUI</a></strong>
+            </h1>
           </header>
         </div>
       </div>
 
-      <div class="row mt-1 mt-md-3 mt-lg-5  d-flex justify-content-center">
-
+      <div class="row mt-1 mt-md-3 mt-lg-5 d-flex justify-content-center">
         <!-- PRODUCTO -->
         <div class="col-12 col-md-10 col-lg-8 offset-lg-2 col-xl-5 offset-xl-1">
           <main>
             <div class="container-fluid">
               <div class="row">
-                <div class="col-12 col-sm-6 p-4 d-flex justify-content-center border">
+                <div
+                  class="
+                    col-12 col-sm-6
+                    p-4
+                    d-flex
+                    justify-content-center
+                    border
+                  "
+                >
                   <img src="" id="image" alt="Producto de vestir" />
                 </div>
 
@@ -135,7 +147,16 @@
                   <p tabindex="3" class="shiping">Envio gratuito</p>
                   <p tabindex="4" id="price"></p>
 
-                  <button tabindex="4" id="reservar" class="btn btn-primary" onclick="toggleFrm()" aria-expanded="false" aria-controls="form">Reservar</button>
+                  <button
+                    tabindex="4"
+                    id="reservar"
+                    class="btn btn-primary"
+                    onclick="toggleFrm()"
+                    aria-expanded="false"
+                    aria-controls="form"
+                  >
+                    Reservar
+                  </button>
                 </div>
               </div>
             </div>
@@ -143,16 +164,41 @@
         </div>
 
         <!-- FORMULARIO -->
-        <div id="form" role="region" aria-labelledby="reservar" class="col-12 offset-0 mt-sm-2 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-lg-5 col-xl-5 mt-xl-2">
+        <div
+          id="form"
+          role="region"
+          aria-labelledby="reservar"
+          class="
+            col-12
+            offset-0
+            mt-sm-2
+            col-md-10
+            offset-md-1
+            col-lg-8
+            offset-lg-2
+            mt-lg-5
+            col-xl-5
+            mt-xl-2
+          "
+        >
           <aside>
             <div class="container-fluid">
               <div class="row">
                 <div class="formHolder col-12 border">
                   <div aria-hidden="true" id="waitingHolder" class="center">
-                    <p id="waiting" class="waiting p-5">Esperamos tu reserva!</p>
+                    <p id="waiting" class="waiting p-5">
+                      Esperamos tu reserva!
+                    </p>
                   </div>
-                  
-                  <form role="region" id="frm" action="" method="" class="p-5" style="display: none;">
+
+                  <form
+                    role="region"
+                    id="frm"
+                    action=""
+                    method=""
+                    class="p-5"
+                    style="display: none"
+                  >
                     <div class="container-fluid">
                       <div class="row">
                         <div class="col-12 fr">
@@ -160,68 +206,173 @@
                             <p class="frmTitle">Su reserva:</p>
                           </caption>
                         </div>
-                        
+
                         <div class="col-12 fr">
-                          <label for="nombre" class="form-label">Nombre y Apellido:<b class="req">*</b></label>
-                          <input type="text" id="nombre" class="form-control" required>
-                        </div>
-                        
-                        <div class="col-12 col-md-6 fr">
-                          <label for="email" class="form-label">Correo electronico:<b class="req">*</b></label>
-                          <input type="email" id="email" class="form-control" placeholder="tunombre@ejemplo.com" required>
+                          <label for="nombre" class="form-label"
+                            >Nombre y Apellido:<b class="req">*</b></label
+                          >
+                          <input
+                            type="text"
+                            id="nombre"
+                            class="form-control"
+                            required
+                          />
                         </div>
 
                         <div class="col-12 col-md-6 fr">
-                          <label for="pass" class="form-label">Contraseña: (8-40)<b class="req">*</b></label>
-                          <input type="password" id="pass" class="form-control" data-minlength="8" data-maxlength="40" required>
+                          <label for="email" class="form-label"
+                            >Correo electronico:<b class="req">*</b></label
+                          >
+                          <input
+                            type="email"
+                            id="email"
+                            class="form-control"
+                            placeholder="tunombre@ejemplo.com"
+                            required
+                          />
                         </div>
-                        
+
+                        <div class="col-12 col-md-6 fr">
+                          <label for="pass" class="form-label"
+                            >Contraseña: (8-40)<b class="req">*</b></label
+                          >
+                          <input
+                            type="password"
+                            id="pass"
+                            class="form-control"
+                            data-minlength="8"
+                            data-maxlength="40"
+                            required
+                          />
+                        </div>
+
                         <div class="col-12 fr">
-                          <label for="date" class="form-label">Fecha:<b class="req">*</b></label>
-                          <input type="date" id="date" class="form-control" required>
+                          <label for="date" class="form-label"
+                            >Fecha:<b class="req">*</b></label
+                          >
+                          <input
+                            type="date"
+                            id="date"
+                            class="form-control"
+                            required
+                          />
                         </div>
-                        
+
                         <div class="col-12 fr">
-                          <label for="talla" class="form-label">Talla:<b class="req">*</b></label>
-                          <input type="number" id="talla" min="20" max="100" data-bind="value:talla" placeholder="20 - 100" class="form-control"  required/>
+                          <label for="talla" class="form-label"
+                            >Talla:<b class="req">*</b></label
+                          >
+                          <input
+                            type="number"
+                            id="talla"
+                            min="20"
+                            max="100"
+                            data-bind="value:talla"
+                            placeholder="20 - 100"
+                            class="form-control"
+                            required
+                          />
                         </div>
-                        
-                        <div class="col-12 col-md-6 form-check fr mb-0" aria-label="Accesorios adicionales">
+
+                        <div
+                          class="col-12 col-md-6 form-check fr mb-0"
+                          aria-label="Accesorios adicionales"
+                        >
                           <p class="frmSub">Accesorios adicionales:</p>
-                          <input class="form-check-input ms-3" type="checkbox" value="" id="corbata">
-                          <label for="corbata" class="form-label">&nbsp;&nbsp;Corbata</label><br>
-                          <input class="form-check-input ms-3" type="checkbox" value="" id="smoking">
-                          <label for="smoking" class="form-label">&nbsp;&nbsp;Smoking</label><br>
-                          <input class="form-check-input ms-3" type="checkbox" value="" id="panuelo">
-                          <label for="panuelo" class="form-label">&nbsp;&nbsp;Pañuelo</label>
+                          <input
+                            class="form-check-input ms-3"
+                            type="checkbox"
+                            value=""
+                            id="corbata"
+                          />
+                          <label for="corbata" class="form-label"
+                            >&nbsp;&nbsp;Corbata</label
+                          ><br />
+                          <input
+                            class="form-check-input ms-3"
+                            type="checkbox"
+                            value=""
+                            id="smoking"
+                          />
+                          <label for="smoking" class="form-label"
+                            >&nbsp;&nbsp;Smoking</label
+                          ><br />
+                          <input
+                            class="form-check-input ms-3"
+                            type="checkbox"
+                            value=""
+                            id="panuelo"
+                          />
+                          <label for="panuelo" class="form-label"
+                            >&nbsp;&nbsp;Pañuelo</label
+                          >
                         </div>
 
-                        <div class="col-12 col-md-6 form-check fr mb-0" aria-label="Dias de reserva">
-                          <p class="frmSub">Dias de reserva:<b class="req">*</b></p>
-                          <input class="form-check-input ms-3" type="radio" name="dias" id="unDia" checked>
-                          <label class="form-check-label" for="unDia">&nbsp;&nbsp;1 Dia</label><br>
-                          <input class="form-check-input ms-3" type="radio" name="dias" id="dosDias">
-                          <label class="form-check-label" for="dosDias">&nbsp;&nbsp;2 Dias</label>
+                        <div
+                          class="col-12 col-md-6 form-check fr mb-0"
+                          aria-label="Dias de reserva"
+                        >
+                          <p class="frmSub">
+                            Dias de reserva:<b class="req">*</b>
+                          </p>
+                          <input
+                            class="form-check-input ms-3"
+                            type="radio"
+                            name="dias"
+                            id="unDia"
+                            checked
+                          />
+                          <label class="form-check-label" for="unDia"
+                            >&nbsp;&nbsp;1 Dia</label
+                          ><br />
+                          <input
+                            class="form-check-input ms-3"
+                            type="radio"
+                            name="dias"
+                            id="dosDias"
+                          />
+                          <label class="form-check-label" for="dosDias"
+                            >&nbsp;&nbsp;2 Dias</label
+                          >
                         </div>
 
                         <div class="col-12 fr">
-                          <label for="email" class="form-label">Sucursal de retiro:<b class="req">*</b></label>
-                          <select class="form-select" aria-label="Seleccion de sucursal de retiro" required>
-                            <option disabled selected>Seleccione una sucursal..</option>
+                          <label for="email" class="form-label"
+                            >Sucursal de retiro:<b class="req">*</b></label
+                          >
+                          <select
+                            class="form-select"
+                            aria-label="Seleccion de sucursal de retiro"
+                            required
+                          >
+                            <option disabled selected>
+                              Seleccione una sucursal..
+                            </option>
                             <option value="LA">Los Angeles</option>
                             <option value="UK">Reino Unido</option>
                           </select>
                         </div>
 
                         <div class="col-12 fr">
-                          <label for="anotaciones" class="form-label">Anotaciones:</label>
-                          <textarea class="form-control" id="anotaciones" rows="3" style="resize: none;"></textarea>
+                          <label for="anotaciones" class="form-label"
+                            >Anotaciones:</label
+                          >
+                          <textarea
+                            class="form-control"
+                            id="anotaciones"
+                            rows="3"
+                            style="resize: none"
+                          ></textarea>
                         </div>
 
                         <div class="col-12 center fr pb-0">
-                          <input type="submit" onsubmit="sended()" class="btn btn-primary" value="Confirmar">
+                          <input
+                            type="submit"
+                            onsubmit="sended()"
+                            class="btn btn-primary"
+                            value="Confirmar"
+                          />
                         </div>
-
                       </div>
                     </div>
                   </form>

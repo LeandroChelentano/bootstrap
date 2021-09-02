@@ -13,12 +13,14 @@ header {
   background-color: black;
 }
 
-header p {
+header h1 {
   padding: 7px;
+  font-size: 1rem;
 }
 
-header p strong a {
+header h1 strong a {
   color: #fff;
+  font-size: 1rem;
 }
 
 .container-fluid,

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -64,11 +64,6 @@
     ></script>
     <script src="domains/main.js"></script>
     <script src="domains/data.js"></script>
-    <script text="text/javascript">
-      $(function () {
-        $("[data-bs-toggle=tooltip").tooltip();
-      });
-    </script>
   </head>
   <body onload="loadCards()">
     <div class="container-fluid">
@@ -78,7 +73,13 @@
             class="navbar navbar-expand-lg navbar-light bg-light"
             style="gap: 0px"
           >
-            <img src="imgs/logo.png" class="navbar-brand" id="logo" alt="Indumentis Logo" />
+            <img
+              src="imgs/logo.png"
+              class="navbar-brand"
+              id="logo"
+              alt="Indumentis Logo"
+              aria-label="Indumentis Logo"
+            />
             <button
               class="navbar-toggler"
               type="button"
@@ -130,9 +131,10 @@
       <div class="row">
         <div class="col-12">
           <header>
-            <p tabindex="0">
-              Ofertas de hasta 35% - <strong><a href="htmls/mens.html">VER AQUI</a></strong>
-            </p>
+            <h1 tabindex="0">
+              Ofertas de hasta 35% -
+              <strong><a href="htmls/mens.html">VER AQUI</a></strong>
+            </h1>
           </header>
         </div>
       </div>
@@ -156,8 +158,8 @@
               <div class="row d-none d-xl-flex">
                 <div class="col-6 center m-0">
                   <!-- Video -->
-                  <div id="left center">
-                    <div id="vidHolder">
+                  <div id="left">
+                    <div> <!-- id="vidHolder" -->
                       <video
                         id="video"
                         autoplay="autoplay"
@@ -166,11 +168,11 @@
                         loop
                         style="pointer-events: none"
                         title="Video Coleccion Primavera-Verano"
-                        alt="Video donde se muetra la coleccion de primavera verano"
+                        aria-label="Video donde se muetra la coleccion de primavera verano"
                         tabindex="0"
                       >
                         <source
-                          src="vids/Video Indumentis.mp4"
+                          src="vids/Video-Indumentis.mp4"
                           type="video/mp4"
                         />
                       </video>
@@ -179,10 +181,10 @@
                 </div>
                 <!-- Texto -->
                 <div class="col-6 v-center">
-                  <p id="homeT" class="welcomeTitle mt-0" tabindex="1">
+                  <p id="home" class="welcomeTitle mt-0" tabindex="1">
                     <strong>Coleccion Primavera - Verano</strong>
                   </p>
-                  <p id="welcomeDesc" class="welcomeDesc" tabindex="2">
+                  <p class="welcomeDesc" tabindex="2">
                     Aliquip nulla eiusmod nisi cupidatat sunt commodo qui dolor
                     excepteur ipsum sint laboris. Nulla mollit irure commodo
                     ipsum velit elit cillum incididunt. Ut voluptate excepteur
@@ -192,7 +194,6 @@
                   </p>
                   <button
                     class="welcomeBtn"
-                    id="welcomeBtn"
                     data-bs-toggle="modal"
                     data-bs-target="#elegirCat"
                     onclick="window.open('', '_self')"
@@ -214,18 +215,18 @@
                   <div id="left">
                     <div id="vidHolder">
                       <video
-                        id="video"
+                        id="smallVideo"
                         autoplay="autoplay"
                         playsinline
                         muted
                         loop
                         style="pointer-events: none"
                         title="Video Coleccion Primavera-Verano"
-                        alt="Video donde se muetra la coleccion de primavera verano"
+                        aria-label="Video donde se muetra la coleccion de primavera verano"
                         tabindex="1"
                       >
                         <source
-                          src="vids/Video Indumentis.mp4"
+                          src="vids/Video-Indumentis.mp4"
                           type="video/mp4"
                         />
                       </video>
@@ -304,16 +305,23 @@
       </div>
     </div>
     <!-- end of main container -->
-    <div id="elegirCat" class="modal" aria-label="Que estas buscando?">
+    <div id="elegirCat" class="modal"> <!-- aria-label="Que estas buscando?" -->
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Que estas buscando?</h5>
+            <h5
+              class="modal-title"
+              tabindex="0"
+              aria-label="Selecciona un genero para la busqueda"
+            >
+              Que estas buscando?
+            </h5>
             <button
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
-              aria-label="Close"
+              aria-label="Cerrar ventana emergente"
+              tabindex="1"
             ></button>
           </div>
           <div class="modal-footer d-flex justify-content-center">
@@ -322,16 +330,18 @@
               class="cat m-2"
               data-bs-dismiss="modal"
               onclick="window.open('htmls/mens.html', '_self')"
-              tabindex="0"
-            >
+              tabindex="2"
+              aria-label="Buscar ropa para hombre."
+              >
               Para hombres
             </button>
             <button
-              type="button"
-              class="cat m-2"
-              data-bs-dismiss="modal"
-              onclick="window.open('htmls/womans.html', '_self')"
-              tabindex="1"
+            type="button"
+            class="cat m-2"
+            data-bs-dismiss="modal"
+            onclick="window.open('htmls/womans.html', '_self')"
+            tabindex="3"
+            aria-label="Buscar ropa para mujer."
             >
               Para mujeres
             </button>
