@@ -77,6 +77,9 @@
             <div class="collapse navbar-collapse" id="navbarsExample03">
               <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                 <li class="nav-item">
+                  <a class="nav-link active ps-4" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link active ps-4" href="about.html"
                     >Conocenos</a
                   >
@@ -109,24 +112,24 @@
         <div class="col-12">
           <header>
             <p>
-              Ofertas de hasta 35% - <strong><a href="#">VER AQUI</a></strong>
+              Ofertas de hasta 35% - <strong><a href="mens.html">VER AQUI</a></strong>
             </p>
           </header>
         </div>
       </div>
 
-      <div class="row mt-1 mt-md-3 mt-lg-5">
-        <div class="col-4 offset-lg-2">
+      <div class="row mt-1 mt-md-3 mt-lg-5  d-flex justify-content-center">
+
+        <!-- PRODUCTO -->
+        <div class="col-12 col-md-10 col-lg-8 offset-lg-2 col-xl-5 offset-xl-1">
           <main>
             <div class="container-fluid">
               <div class="row">
-                <!-- PRODUCTO Y DETALLES -->
-                <!-- Se recibe ID de producto -->
-                <div class="col-7 p-4 d-flex justify-content-center border">
+                <div class="col-12 col-sm-6 p-4 d-flex justify-content-center border">
                   <img src="" id="image" alt="Producto" />
                 </div>
 
-                <div class="col-5 p-4">
+                <div class="col-12 col-sm-6 p-4">
                   <p id="title"></p>
                   <p id="desc"></p>
                   <p class="shiping">Envio gratuito</p>
@@ -139,7 +142,8 @@
           </main>
         </div>
 
-        <div class="col-4">
+        <!-- FORMULARIO -->
+        <div class="col-12 offset-0 mt-sm-2 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-lg-5 col-xl-5 mt-xl-2">
           <aside>
             <div class="container-fluid">
               <div class="row">
@@ -168,7 +172,7 @@
                         </div>
 
                         <div class="col-12 col-md-6 fr">
-                          <label for="pass" class="form-label">Contraseña:<b class="req">*</b></label>
+                          <label for="pass" class="form-label">Contraseña: (8-40)<b class="req">*</b></label>
                           <input type="password" id="pass" class="form-control" data-minlength="8" data-maxlength="40" required>
                         </div>
                         
@@ -203,7 +207,7 @@
                         <div class="col-12 fr">
                           <label for="email" class="form-label">Sucursal de retiro:<b class="req">*</b></label>
                           <select class="form-select" aria-label="Seleccion de sucursal de retiro" required>
-                            <option selected>Seleccione una sucursal..</option>
+                            <option disabled selected>Seleccione una sucursal..</option>
                             <option value="LA">Los Angeles</option>
                             <option value="UK">Reino Unido</option>
                           </select>
@@ -215,7 +219,7 @@
                         </div>
 
                         <div class="col-12 center fr pb-0">
-                          <input type="submit" class="btn btn-primary" value="Confirmar">
+                          <input type="submit" onsubmit="sended()" class="btn btn-primary" value="Confirmar">
                         </div>
 
                       </div>

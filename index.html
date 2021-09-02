@@ -12,24 +12,37 @@
     <meta name="revist-after" content="2 days" />
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="domains/main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+      integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+      crossorigin="anonymous"
+    ></script>
+
     <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
     <link
       rel="stylesheet"
@@ -43,8 +56,20 @@
       media="screen"
       href="styles/home.css"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="domains/main.js"></script>
+    <script src="domains/data.js"></script>
+    <script text="text/javascript">
+      $(function () {
+        $("[data-bs-toggle=tooltip").tooltip();
+      });
+    </script>
   </head>
-  <body>
+  <body onload="loadCards()">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
@@ -69,7 +94,12 @@
             <div class="collapse navbar-collapse" id="navbarsExample03">
               <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                 <li class="nav-item">
-                  <a class="nav-link active ps-4" href="htmls/about.html">Conocenos</a>
+                  <a class="nav-link active ps-4" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active ps-4" href="htmls/about.html"
+                    >Conocenos</a
+                  >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active ps-4" href="htmls/mens.html"
@@ -82,10 +112,14 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active ps-4" href="htmls/delays.html">Demoras</a>
+                  <a class="nav-link active ps-4" href="htmls/delays.html"
+                    >Demoras</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active ps-4" href="htmls/location.html">Ubicacion</a>
+                  <a class="nav-link active ps-4" href="htmls/location.html"
+                    >Ubicacion</a
+                  >
                 </li>
               </ul>
             </div>
@@ -97,7 +131,7 @@
         <div class="col-12">
           <header>
             <p>
-              Ofertas de hasta 35% - <strong><a href="#">VER AQUI</a></strong>
+              Ofertas de hasta 35% - <strong><a href="htmls/mens.html">VER AQUI</a></strong>
             </p>
           </header>
         </div>
@@ -107,14 +141,14 @@
       <div class="row separator-small d-block d-lg-none">
         <div class="col-12 separator-small d-block d-md-none"></div>
       </div>
-      
+
       <!-- Separador grande -->
       <div class="row separator-big d-none d-lg-block">
         <div class="col-12 separator-big d-none d-md-block"></div>
       </div>
 
       <div class="row">
-        <div class="col-10 offset-1" style="padding: 1px;">
+        <div class="col-10 offset-1" style="padding: 1px">
           <main>
             <!-- WELCOME -->
             <div class="container-fluid">
@@ -143,29 +177,29 @@
                   </div>
                 </div>
                 <!-- Texto -->
-                <div class="col-6">
-                  
-                    <p id="homeT" class="welcomeTitle mt-0">
-                      <strong>Coleccion Primavera - Verano</strong>
-                    </p>
-                    <p id="welcomeDesc" class="welcomeDesc">
-                      Aliquip nulla eiusmod nisi cupidatat sunt commodo qui
-                      dolor excepteur ipsum sint laboris. Nulla mollit irure
-                      commodo ipsum velit elit cillum incididunt. Ut voluptate
-                      excepteur in ipsum. In duis Lorem irure cupidatat aute ex
-                      labore laboris pariatur veniam eu. Duis cillum dolore
-                      ullamco cillum.
-                    </p>
-                    <button
-                      class="welcomeBtn"
-                      id="welcomeBtn"
-                      onclick="window.open('', '_self')"
-                    >
-                      <strong>VER CATALOGO ></strong>
-                    </button>
-                    <br>
-                    <br>
-                  
+                <div class="col-6 v-center">
+                  <p id="homeT" class="welcomeTitle mt-0">
+                    <strong>Coleccion Primavera - Verano</strong>
+                  </p>
+                  <p id="welcomeDesc" class="welcomeDesc">
+                    Aliquip nulla eiusmod nisi cupidatat sunt commodo qui dolor
+                    excepteur ipsum sint laboris. Nulla mollit irure commodo
+                    ipsum velit elit cillum incididunt. Ut voluptate excepteur
+                    in ipsum. In duis Lorem irure cupidatat aute ex labore
+                    laboris pariatur veniam eu. Duis cillum dolore ullamco
+                    cillum.
+                  </p>
+                  <button
+                    class="welcomeBtn"
+                    id="welcomeBtn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#elegirCat"
+                    onclick="window.open('', '_self')"
+                  >
+                    <strong>VER CATALOGO ></strong>
+                  </button>
+                  <br />
+                  <br />
                 </div>
               </div>
               <!-- Para dispositivos chicos -->
@@ -204,6 +238,8 @@
                   <button
                     class="welcomeBtn"
                     id="welcomeBtn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#elegirCat"
                     onclick="window.open('', '_self')"
                   >
                     <strong>VER CATALOGO ></strong>
@@ -226,101 +262,73 @@
       </div>
 
       <div class="row">
-        <section>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-10 offset-1 col-md-4 offset-md-2 col-lg-2 offset-lg-2 mt-5 mt-md-0">
-                <div class="card border border-dark rounded m-2">
-                  <img
-                    class="card-images"
-                    src="../imgs/clothes/Ribbed Jersey Dress.png"
-                    alt="Mujer con vestido marron mirando a camara sosteniendo su cabeza."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title" title="Ribbed Jersey Dress">
-                      Ribbed Jersey Dress
-                    </h5>
-                    <p class="card-price">$12.99</p>
-                    <a href="../presentation/catalogo.html" class="btn btn-primary"
-                      >Ver</a
-                    >
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-10 offset-1 col-md-4 offset-md-0 col-lg-2 offset-lg-0 mt-md-0">
-                <div class="card border border-dark rounded m-2">
-                  <img
-                    class="card-images"
-                    src="../imgs/clothes/Ribbed Jersey Dress.png"
-                    alt="Mujer con vestido marron mirando a camara sosteniendo su cabeza."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title" title="Ribbed Jersey Dress">
-                      Ribbed Jersey Dress
-                    </h5>
-                    <p class="card-price">$12.99</p>
-                    <a href="../presentation/catalogo.html" class="btn btn-primary"
-                      >Ver</a
-                    >
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-10 offset-1 col-md-4 offset-md-2 col-lg-2 offset-lg-0 mt-lg-0">
-                <div class="card border border-dark rounded m-2">
-                  <img
-                    class="card-images"
-                    src="../imgs/clothes/Ribbed Jersey Dress.png"
-                    alt="Mujer con vestido marron mirando a camara sosteniendo su cabeza."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title" title="Ribbed Jersey Dress">
-                      Ribbed Jersey Dress
-                    </h5>
-                    <p class="card-price">$12.99</p>
-                    <a href="../presentation/catalogo.html" class="btn btn-primary"
-                      >Ver</a
-                    >
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-10 offset-1 col-md-4 offset-md-0 col-lg-2 offset-lg-0 mt-lg-0">
-                <div class="card border border-dark rounded m-2">
-                  <img
-                    class="card-images"
-                    src="../imgs/clothes/Ribbed Jersey Dress.png"
-                    alt="Mujer con vestido marron mirando a camara sosteniendo su cabeza."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title" title="Ribbed Jersey Dress">
-                      Ribbed Jersey Dress
-                    </h5>
-                    <p class="card-price">$12.99</p>
-                    <a href="../presentation/catalogo.html" class="btn btn-primary"
-                      >Ver</a
-                    >
+        <div class="col-12">
+          <section>
+            <div class="container-fluid">
+              <div class="row d-flex align justify-content-center">
+                <div class="col-12 col-sm-10 col-lg-8 col-xl-10 center">
+                  <div
+                    id="homeCardsHolder"
+                    class="
+                      d-flex
+                      flex-row
+                      justify-content-evenly
+                      flex-wrap
+                      center
+                    "
+                  >
+                    <!-- CARDS GO HERE -->
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
 
       <!-- Separador chico -->
       <div class="row separator-small d-block d-md-none">
         <div class="col-12 separator-small d-block d-md-none"></div>
       </div>
-      
+
       <!-- Separador grande -->
       <div class="row separator-big d-none d-md-block">
         <div class="col-12 separator-big d-none d-md-block"></div>
       </div>
-
     </div>
     <!-- end of main container -->
-
+    <div id="elegirCat" class="modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Que estas buscando?</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button
+              type="button"
+              class="cat m-2"
+              data-bs-dismiss="modal"
+              onclick="window.open('htmls/mens.html', '_self')"
+            >
+              Para hombres
+            </button>
+            <button
+              type="button"
+              class="cat m-2"
+              data-bs-dismiss="modal"
+              onclick="window.open('htmls/womans.html', '_self')"
+            >
+              Para mujeres
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

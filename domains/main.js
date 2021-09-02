@@ -11,6 +11,11 @@ let goTo = (artId) => {
   window.open("articulo.html", "_self");
 };
 
+let goToHome = (artId) => {
+  window.localStorage.setItem("identifier", artId);
+  window.open("htmls/articulo.html", "_self");
+}
+
 let loadArticle = () => {
   var artId = window.localStorage.getItem("identifier");
   artId = parseInt(artId);
@@ -41,6 +46,8 @@ let loadMens = () => {
         articleElement.id = articulos[i].id;
 
         articleElement.setAttribute("onclick", "goTo(this.id)");
+        articleElement.setAttribute("title", `${articulos[i].name}`);
+        var tooltip = new bootstrap.Tooltip(articleElement);
 
         let img = document.createElement("img");
         img.src = articulos[i].img;
@@ -75,6 +82,8 @@ let loadWomans = () => {
         articleElement.id = articulos[i].id;
 
         articleElement.setAttribute("onclick", "goTo(this.id)");
+        articleElement.setAttribute("title", `${articulos[i].name}`);
+        var tooltip = new bootstrap.Tooltip(articleElement);
 
         let img = document.createElement("img");
         img.src = articulos[i].img;
@@ -118,3 +127,77 @@ let toggleFrm = () => {
         btn.className = "btn btn-primary";
     }
 }
+
+let arr = new Array();
+let loadCards = () => {
+  arr.splice(0, arr.length);
+  generate(5); //Determina el numero de tarjetas
+  for (let i = 0; i < arr.length; i++) {
+    let articleElement = document.createElement("article");
+    articleElement.id = articulos[arr[i]].id;
+
+    articleElement.setAttribute("onclick", "goToHome(this.id)");
+    articleElement.setAttribute("title", `${articulos[arr[i]].name}`);
+    var tooltip = new bootstrap.Tooltip(articleElement);
+
+    let img = document.createElement("img");
+    img.src = articulos[arr[i]].img;
+
+    let sep = document.createElement("div");
+    sep.className = "separator";
+
+    let artName = document.createElement("p");
+    artName.innerHTML = articulos[arr[i]].name;
+    artName.className = "artTitle";
+
+    let artPrice = document.createElement("p");
+    artPrice.innerHTML = `U$S ${articulos[arr[i]].price}`;
+    artPrice.className = "artPrice";
+
+    articleElement.appendChild(img);
+    articleElement.appendChild(sep);
+    articleElement.appendChild(artName);
+    articleElement.appendChild(artPrice);
+
+    document.getElementById("homeCardsHolder").appendChild(articleElement);
+  }
+}
+
+let generate = (q) => {
+  while (arr.length < q) {
+    var target = Math.floor(Math.random() * 12);
+    var used = false;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] == target) {
+        used = true;
+      }
+    }
+    if (!used) {
+      arr.push(target);
+    }
+  }
+}
+
+// For tooltip
+$(function() {
+  $("[data-bs-toggle=tooltip").tooltip();
+});
+
+/* Tooltip example => {
+
+  <button
+    class="btn btn-secondary"
+    data-bs-toggle="tooltip"
+    title="Tooltip"
+  >
+    Tooltip on top</button>
+  </div>
+
+} */
+
+
+// jQuery test => {
+  // $("document").ready(function() {
+  //   alert('jQuery test');
+  // })
+// }

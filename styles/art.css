@@ -10,7 +10,8 @@
 }
 
 .artImg {
-    width: 90%;
+    /* width: 230px; */
+    height: 325px;
 }
 
 .artPrice {
