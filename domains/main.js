@@ -1,5 +1,5 @@
 let toggleFilter = () => {
-  let btn = document.querySelector("#filter")
+  let btn = document.querySelector("#filter");
   if (document.getElementById("filterMobile").style.display == "none") {
     document.getElementById("filterMobile").style.display = "block";
     btn.setAttribute("aria-expanded", "true");
@@ -17,7 +17,7 @@ let goTo = (artId) => {
 let goToHome = (artId) => {
   window.localStorage.setItem("identifier", artId);
   window.open("htmls/articulo.html", "_self");
-}
+};
 
 let loadArticle = () => {
   var artId = window.localStorage.getItem("identifier");
@@ -45,7 +45,7 @@ let loadMens = () => {
   let arr1 = Array.from(document.querySelectorAll(".qunt"));
   let arr2 = Array.from(document.querySelectorAll(".Nqunt"));
   let arr = arr1.concat(arr2);
-  arr.forEach(obj => {
+  arr.forEach((obj) => {
     obj.setAttribute("aria-hidden", true);
   });
 
@@ -58,7 +58,10 @@ let loadMens = () => {
 
         articleElement.setAttribute("onclick", "goTo(this.id)");
         articleElement.setAttribute("title", `${articulos[i].name}`);
-        articleElement.setAttribute("aria-label", `Articulo. Titulo: ${articulos[i].name}. Precio:${articulos[i].price}`);
+        articleElement.setAttribute(
+          "aria-label",
+          `Articulo. Titulo: ${articulos[i].name}. Precio:${articulos[i].price}`
+        );
         articleElement.setAttribute("tabindex", count);
         var tooltip = new bootstrap.Tooltip(articleElement);
 
@@ -93,7 +96,7 @@ let loadWomans = () => {
   let arr1 = Array.from(document.querySelectorAll(".qunt"));
   let arr2 = Array.from(document.querySelectorAll(".Nqunt"));
   let arr = arr1.concat(arr2);
-  arr.forEach(obj => {
+  arr.forEach((obj) => {
     obj.setAttribute("aria-hidden", true);
   });
 
@@ -106,7 +109,10 @@ let loadWomans = () => {
 
         articleElement.setAttribute("onclick", "goTo(this.id)");
         articleElement.setAttribute("title", `${articulos[i].name}`);
-        articleElement.setAttribute("aria-label", `Articulo. Titulo: ${articulos[i].name}. Precio:${articulos[i].price}`);
+        articleElement.setAttribute(
+          "aria-label",
+          `Articulo. Titulo: ${articulos[i].name}. Precio:${articulos[i].price}`
+        );
         articleElement.setAttribute("tabindex", count);
         var tooltip = new bootstrap.Tooltip(articleElement);
 
@@ -138,24 +144,24 @@ let loadWomans = () => {
 };
 
 let toggleFrm = () => {
-    let frm = document.getElementById('frm');
-    let btn = document.getElementById('reservar');
-    let wait = document.getElementById('waitingHolder');
+  let frm = document.getElementById("frm");
+  let btn = document.getElementById("reservar");
+  let wait = document.getElementById("waitingHolder");
 
-    if (frm.style.display == "none") {
-        frm.style.display = "block";
-        wait.style.display = "none";
-        btn.innerHTML = "Cancelar";
-        btn.className = "btn btn-danger";
-        btn.setAttribute("aria-expanded", "true");
-    } else {
-        frm.style.display = "none";
-        wait.style.display = "block";
-        btn.innerHTML = "Reservar";
-        btn.className = "btn btn-primary";
-        btn.setAttribute("aria-expanded", "false");
-    }
-}
+  if (frm.style.display == "none") {
+    frm.style.display = "block";
+    wait.style.display = "none";
+    btn.innerHTML = "Cancelar";
+    btn.className = "btn btn-danger";
+    btn.setAttribute("aria-expanded", "true");
+  } else {
+    frm.style.display = "none";
+    wait.style.display = "block";
+    btn.innerHTML = "Reservar";
+    btn.className = "btn btn-primary";
+    btn.setAttribute("aria-expanded", "false");
+  }
+};
 
 let arr = new Array();
 let loadCards = () => {
@@ -191,7 +197,7 @@ let loadCards = () => {
 
     document.getElementById("homeCardsHolder").appendChild(articleElement);
   }
-}
+};
 
 let generate = (q) => {
   while (arr.length < q) {
@@ -206,28 +212,4 @@ let generate = (q) => {
       arr.push(target);
     }
   }
-}
-
-// For tooltip
-$(function() {
-  $("[data-bs-toggle=tooltip").tooltip();
-});
-
-/* Tooltip example => {
-
-  <button
-    class="btn btn-secondary"
-    data-bs-toggle="tooltip"
-    title="Tooltip"
-  >
-    Tooltip on top</button>
-  </div>
-
-} */
-
-
-// jQuery test => {
-  // $("document").ready(function() {
-  //   alert('jQuery test');
-  // })
-// }
+};
