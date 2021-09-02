@@ -30,6 +30,11 @@ video {
   box-shadow: 0px 0px 10px black;
 }
 
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
 
 
 /* articles */
