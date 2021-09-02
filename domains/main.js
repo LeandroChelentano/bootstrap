@@ -1,8 +1,11 @@
 let toggleFilter = () => {
+  let btn = document.querySelector("#filter")
   if (document.getElementById("filterMobile").style.display == "none") {
     document.getElementById("filterMobile").style.display = "block";
+    btn.setAttribute("aria-expanded", "true");
   } else {
     document.getElementById("filterMobile").style.display = "none";
+    btn.setAttribute("aria-expanded", "false");
   }
 };
 
@@ -39,6 +42,14 @@ let loadArticle = () => {
 };
 
 let loadMens = () => {
+  let arr1 = Array.from(document.querySelectorAll(".qunt"));
+  let arr2 = Array.from(document.querySelectorAll(".Nqunt"));
+  let arr = arr1.concat(arr2);
+  arr.forEach(obj => {
+    obj.setAttribute("aria-hidden", true);
+  });
+
+  let count = 17;
   for (let k = 0; k < 4; k++) {
     for (let i = 0; i < articulos.length; i++) {
       if (articulos[i].gender == "M") {
@@ -47,10 +58,13 @@ let loadMens = () => {
 
         articleElement.setAttribute("onclick", "goTo(this.id)");
         articleElement.setAttribute("title", `${articulos[i].name}`);
+        articleElement.setAttribute("aria-label", `Articulo. Titulo: ${articulos[i].name}. Precio:${articulos[i].price}`);
+        articleElement.setAttribute("tabindex", count);
         var tooltip = new bootstrap.Tooltip(articleElement);
 
         let img = document.createElement("img");
         img.src = articulos[i].img;
+        img.alt = articulos[i].desc;
 
         let sep = document.createElement("div");
         sep.className = "separator";
@@ -69,12 +83,21 @@ let loadMens = () => {
         articleElement.appendChild(artPrice);
 
         document.getElementById("articlesHolder").appendChild(articleElement);
+        count++;
       }
     }
   }
 };
 
 let loadWomans = () => {
+  let arr1 = Array.from(document.querySelectorAll(".qunt"));
+  let arr2 = Array.from(document.querySelectorAll(".Nqunt"));
+  let arr = arr1.concat(arr2);
+  arr.forEach(obj => {
+    obj.setAttribute("aria-hidden", true);
+  });
+
+  let count = 18;
   for (let k = 0; k < 4; k++) {
     for (let i = 0; i < articulos.length; i++) {
       if (articulos[i].gender == "F") {
@@ -83,10 +106,13 @@ let loadWomans = () => {
 
         articleElement.setAttribute("onclick", "goTo(this.id)");
         articleElement.setAttribute("title", `${articulos[i].name}`);
+        articleElement.setAttribute("aria-label", `Articulo. Titulo: ${articulos[i].name}. Precio:${articulos[i].price}`);
+        articleElement.setAttribute("tabindex", count);
         var tooltip = new bootstrap.Tooltip(articleElement);
 
         let img = document.createElement("img");
         img.src = articulos[i].img;
+        img.alt = articulos[i].desc;
 
         let sep = document.createElement("div");
         sep.className = "separator";
@@ -105,6 +131,7 @@ let loadWomans = () => {
         articleElement.appendChild(artPrice);
 
         document.getElementById("articlesHolder").appendChild(articleElement);
+        count++;
       }
     }
   }
@@ -120,11 +147,13 @@ let toggleFrm = () => {
         wait.style.display = "none";
         btn.innerHTML = "Cancelar";
         btn.className = "btn btn-danger";
+        btn.setAttribute("aria-expanded", "true");
     } else {
         frm.style.display = "none";
         wait.style.display = "block";
         btn.innerHTML = "Reservar";
         btn.className = "btn btn-primary";
+        btn.setAttribute("aria-expanded", "false");
     }
 }
 
@@ -142,6 +171,7 @@ let loadCards = () => {
 
     let img = document.createElement("img");
     img.src = articulos[arr[i]].img;
+    img.alt = articulos[arr[i]].desc;
 
     let sep = document.createElement("div");
     sep.className = "separator";

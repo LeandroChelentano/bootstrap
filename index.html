@@ -75,10 +75,9 @@
         <div class="col-12">
           <nav
             class="navbar navbar-expand-lg navbar-light bg-light"
-            aria-label="Third navbar example"
             style="gap: 0px"
           >
-            <img src="imgs/logo.png" class="navbar-brand" id="logo" />
+            <img src="imgs/logo.png" class="navbar-brand" id="logo" alt="Indumentis Logo" />
             <button
               class="navbar-toggler"
               type="button"
@@ -86,7 +85,7 @@
               data-bs-target="#navbarsExample03"
               aria-controls="navbarsExample03"
               aria-expanded="false"
-              aria-label="Toggle navigation"
+              aria-label="Alternar botones del navegador"
             >
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -130,7 +129,7 @@
       <div class="row">
         <div class="col-12">
           <header>
-            <p>
+            <p tabindex="0">
               Ofertas de hasta 35% - <strong><a href="htmls/mens.html">VER AQUI</a></strong>
             </p>
           </header>
@@ -167,6 +166,7 @@
                         style="pointer-events: none"
                         title="Video Coleccion Primavera-Verano"
                         alt="Video donde se muetra la coleccion de primavera verano"
+                        tabindex="0"
                       >
                         <source
                           src="vids/Video Indumentis.mp4"
@@ -178,10 +178,10 @@
                 </div>
                 <!-- Texto -->
                 <div class="col-6 v-center">
-                  <p id="homeT" class="welcomeTitle mt-0">
+                  <p id="homeT" class="welcomeTitle mt-0" tabindex="1">
                     <strong>Coleccion Primavera - Verano</strong>
                   </p>
-                  <p id="welcomeDesc" class="welcomeDesc">
+                  <p id="welcomeDesc" class="welcomeDesc" tabindex="2">
                     Aliquip nulla eiusmod nisi cupidatat sunt commodo qui dolor
                     excepteur ipsum sint laboris. Nulla mollit irure commodo
                     ipsum velit elit cillum incididunt. Ut voluptate excepteur
@@ -195,6 +195,8 @@
                     data-bs-toggle="modal"
                     data-bs-target="#elegirCat"
                     onclick="window.open('', '_self')"
+                    tabindex="3"
+                    aria-label="Ver catalogo"
                   >
                     <strong>VER CATALOGO ></strong>
                   </button>
@@ -205,7 +207,7 @@
               <!-- Para dispositivos chicos -->
               <div class="row d-flex align justify-content-center d-xl-none">
                 <div class="col-12 col-lg-10">
-                  <p id="homeT" class="welcomeTitle center">
+                  <p id="homeT" class="welcomeTitle center" tabindex="0">
                     <strong>Coleccion Primavera - Verano</strong>
                   </p>
                   <div id="left">
@@ -219,6 +221,7 @@
                         style="pointer-events: none"
                         title="Video Coleccion Primavera-Verano"
                         alt="Video donde se muetra la coleccion de primavera verano"
+                        tabindex="1"
                       >
                         <source
                           src="vids/Video Indumentis.mp4"
@@ -227,7 +230,7 @@
                       </video>
                     </div>
                   </div>
-                  <p id="welcomeDesc" class="welcomeDesc mt-3">
+                  <p id="welcomeDesc" class="welcomeDesc mt-3" tabindex="2">
                     Aliquip nulla eiusmod nisi cupidatat sunt commodo qui dolor
                     excepteur ipsum sint laboris. Nulla mollit irure commodo
                     ipsum velit elit cillum incididunt. Ut voluptate excepteur
@@ -241,6 +244,8 @@
                     data-bs-toggle="modal"
                     data-bs-target="#elegirCat"
                     onclick="window.open('', '_self')"
+                    tabindex="3"
+                    aria-label="Ver catalogo"
                   >
                     <strong>VER CATALOGO ></strong>
                   </button>
@@ -276,6 +281,7 @@
                       flex-wrap
                       center
                     "
+                    aria-hidden="true"
                   >
                     <!-- CARDS GO HERE -->
                   </div>
@@ -297,7 +303,7 @@
       </div>
     </div>
     <!-- end of main container -->
-    <div id="elegirCat" class="modal" tabindex="-1">
+    <div id="elegirCat" class="modal" aria-label="Que estas buscando?">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
@@ -315,6 +321,7 @@
               class="cat m-2"
               data-bs-dismiss="modal"
               onclick="window.open('htmls/mens.html', '_self')"
+              tabindex="0"
             >
               Para hombres
             </button>
@@ -323,6 +330,7 @@
               class="cat m-2"
               data-bs-dismiss="modal"
               onclick="window.open('htmls/womans.html', '_self')"
+              tabindex="1"
             >
               Para mujeres
             </button>

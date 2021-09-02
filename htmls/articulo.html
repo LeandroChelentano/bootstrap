@@ -53,7 +53,6 @@
         <div class="col-12">
           <nav
             class="navbar navbar-expand-lg navbar-light bg-light"
-            aria-label="Third navbar example"
             style="gap: 0px"
           >
             <img
@@ -69,7 +68,7 @@
               data-bs-target="#navbarsExample03"
               aria-controls="navbarsExample03"
               aria-expanded="false"
-              aria-label="Toggle navigation"
+              aria-label="Alternar botones del navegador"
             >
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -111,7 +110,7 @@
       <div class="row">
         <div class="col-12">
           <header>
-            <p>
+            <p tabindex="0">
               Ofertas de hasta 35% - <strong><a href="mens.html">VER AQUI</a></strong>
             </p>
           </header>
@@ -126,16 +125,16 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-12 col-sm-6 p-4 d-flex justify-content-center border">
-                  <img src="" id="image" alt="Producto" />
+                  <img src="" id="image" alt="Producto de vestir" />
                 </div>
 
-                <div class="col-12 col-sm-6 p-4">
-                  <p id="title"></p>
-                  <p id="desc"></p>
-                  <p class="shiping">Envio gratuito</p>
-                  <p id="price"></p>
+                <div class="col-12 col-sm-6 p-4" aria-level="Producto">
+                  <p tabindex="1" id="title"></p>
+                  <p tabindex="2" id="desc"></p>
+                  <p tabindex="3" class="shiping">Envio gratuito</p>
+                  <p tabindex="4" id="price"></p>
 
-                  <button id="reservar" class="btn btn-primary" onclick="toggleFrm()">Reservar</button>
+                  <button tabindex="4" id="reservar" class="btn btn-primary" onclick="toggleFrm()" aria-expanded="false" aria-controls="form">Reservar</button>
                 </div>
               </div>
             </div>
@@ -143,16 +142,16 @@
         </div>
 
         <!-- FORMULARIO -->
-        <div class="col-12 offset-0 mt-sm-2 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-lg-5 col-xl-5 mt-xl-2">
+        <div id="form" role="region" aria-labelledby="reservar" class="col-12 offset-0 mt-sm-2 col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-lg-5 col-xl-5 mt-xl-2">
           <aside>
             <div class="container-fluid">
               <div class="row">
                 <div class="formHolder col-12 border">
-                  <div id="waitingHolder" class="center">
+                  <div aria-hidden="true" id="waitingHolder" class="center">
                     <p id="waiting" class="waiting p-5">Esperamos tu reserva!</p>
                   </div>
                   
-                  <form id="frm" action="" method="" class="p-5" style="display: none;">
+                  <form role="region" id="frm" action="" method="" class="p-5" style="display: none;">
                     <div class="container-fluid">
                       <div class="row">
                         <div class="col-12 fr">
@@ -186,7 +185,7 @@
                           <input type="number" id="talla" min="20" max="100" data-bind="value:talla" placeholder="20 - 100" class="form-control"  required/>
                         </div>
                         
-                        <div class="col-12 col-md-6 form-check fr mb-0">
+                        <div class="col-12 col-md-6 form-check fr mb-0" aria-label="Accesorios adicionales">
                           <p class="frmSub">Accesorios adicionales:</p>
                           <input class="form-check-input ms-3" type="checkbox" value="" id="corbata">
                           <label for="corbata" class="form-label">&nbsp;&nbsp;Corbata</label><br>
@@ -196,12 +195,12 @@
                           <label for="panuelo" class="form-label">&nbsp;&nbsp;Pañuelo</label>
                         </div>
 
-                        <div class="col-12 col-md-6 form-check fr mb-0">
+                        <div class="col-12 col-md-6 form-check fr mb-0" aria-label="Dias de reserva">
                           <p class="frmSub">Dias de reserva:<b class="req">*</b></p>
                           <input class="form-check-input ms-3" type="radio" name="dias" id="unDia" checked>
-                          <label class="form-check-label" for="unDia">1 Dia</label><br>
+                          <label class="form-check-label" for="unDia">&nbsp;&nbsp;1 Dia</label><br>
                           <input class="form-check-input ms-3" type="radio" name="dias" id="dosDias">
-                          <label class="form-check-label" for="dosDias">2 Dias</label>
+                          <label class="form-check-label" for="dosDias">&nbsp;&nbsp;2 Dias</label>
                         </div>
 
                         <div class="col-12 fr">

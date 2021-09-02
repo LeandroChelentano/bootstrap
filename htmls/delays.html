@@ -51,7 +51,6 @@
         <div class="col-12">
           <nav
             class="navbar navbar-expand-lg navbar-light bg-light"
-            aria-label="Third navbar example"
             style="gap: 0px"
           >
             <img
@@ -67,7 +66,7 @@
               data-bs-target="#navbarsExample03"
               aria-controls="navbarsExample03"
               aria-expanded="false"
-              aria-label="Toggle navigation"
+              aria-label="Alternar botones del navegador"
             >
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -110,7 +109,7 @@
       <div class="row">
         <div class="col-12">
           <header>
-            <p>
+            <p tabindex="0">
               Ofertas de hasta 35% - <strong><a href="womans.html">VER AQUI</a></strong>
             </p>
           </header>
@@ -131,10 +130,10 @@
         <div class="content-fluid">
           <div class="row">
             <div class="col-10 offset-1">
-              <p class="title"><strong>Tarifas por demoras</strong></p>
+              <p class="title" tabindex="1"><strong>Tarifas por demoras</strong></p>
             </div>
 
-            <div class="col-10 offset-1 texto">
+            <div class="col-10 offset-1 texto" tabindex="2">
               <p>
                 Para que otras personas la pasen tan bien como vos vistiendo sus
                 prendas soñadas, llevamos a cabo un cuidadoso proceso de
@@ -173,8 +172,115 @@
           </div>
 
           <div class="row">
-              <div class="col-10 offset-1 d-block d-sm-flex justify-content-center overflow-scroll">
-                <table class="table-bordered">
+              <div class="col-10 offset-1 d-block d-md-flex justify-content-center gap-3">
+                <table class="table-bordered" tabindex="3">
+                  <caption>
+                    Tarifas de demoras para hombres
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Tiempo de demora</th>
+                      <th scope="col">Costo en dias de alquiler</th>
+                      <th scope="col">Costo adicional</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">2 horas hasta 1 dia</th>
+                      <td>0</td>
+                      <td>$50</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1 dia</th>
+                      <td>1</td>
+                      <td>$50 + 4% del total</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2 dias</th>
+                      <td>2</td>
+                      <td>$50 + 8% del total</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3 dias</th>
+                      <td>3</td>
+                      <td>$50 + 10% del total</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4 a 5 dias</th>
+                      <td>5</td>
+                      <td>$80 + 18% del total</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6 a 7 dias</th>
+                      <td>7</td>
+                      <td>$100 + 20% del total</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">8 o mas dias</th>
+                      <td>Cantidad de dias de demora</td>
+                      <td>2 dias de alquiler</td>
+                    </tr>
+                  </tbody>
+                </table>
+                
+                <table class="table-bordered mb-5 mb-md-0" tabindex="4">
+                  <caption class="mt-3 mt-md-0">
+                    Tarifas de demoras para mujeres
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Tiempo de demora</th>
+                      <th scope="col">Costo en dias de alquiler</th>
+                      <th scope="col">Costo adicional</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">2 horas hasta 1 dia</th>
+                      <td>0</td>
+                      <td>$200</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">1 dia</th>
+                      <td>1</td>
+                      <td>$200 + 8% del total</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2 dias</th>
+                      <td>2</td>
+                      <td>$200 + 12% del total</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3 dias</th>
+                      <td>3</td>
+                      <td>$200 + 15% del total</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4 a 5 dias</th>
+                      <td>5</td>
+                      <td>$250 + 25% del total</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6 a 7 dias</th>
+                      <td>7</td>
+                      <td>$300 + 30% del total</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">8 o mas dias</th>
+                      <td>Cantidad de dias de demora</td>
+                      <td>3 dias de alquiler</td>
+                    </tr>
+                  </tbody>
+                </table>
+              
+              
+              <!-- </div>
+                
+              <div class="col-10 offset-1 d-block d-sm-flex justify-content-center overflow-scroll"> -->
+                
+                
+
+                <!-- <table class="table-bordered" tabindex="3">
                     <caption>
                       Tarifas por Demoras
                     </caption>
@@ -245,7 +351,7 @@
                         <td>2 días de alquiler</td>
                       </tr>
                     </tbody>
-                  </table>
+                  </table> -->
               </div>
           </div>
 

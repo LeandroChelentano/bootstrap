@@ -30,7 +30,8 @@
 }
 
 .formHolder {
-    height: fit-content
+    height: fit-content;
+    margin-bottom: 30px;
 }
 
 #waitingHolder {

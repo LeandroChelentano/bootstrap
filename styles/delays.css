@@ -27,7 +27,7 @@ main {
   grid-area: table;
   width: 100%;
   height: fit-content;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 }
 
 .texto {
@@ -40,4 +40,11 @@ main {
 
 .separator-small {
   height: 10px;
+}
+
+caption {
+  caption-side: top;
+  font-size: 1.2rem;
+  color: #000;
+  text-align: center;
 }

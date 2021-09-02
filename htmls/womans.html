@@ -53,7 +53,6 @@
         <div class="col-12">
           <nav
             class="navbar navbar-expand-lg navbar-light bg-light"
-            aria-label="Third navbar example"
             style="gap: 0px"
           >
             <img
@@ -69,7 +68,7 @@
               data-bs-target="#navbarsExample03"
               aria-controls="navbarsExample03"
               aria-expanded="false"
-              aria-label="Toggle navigation"
+              aria-label="Alternar botones del navegador"
             >
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -77,7 +76,9 @@
             <div class="collapse navbar-collapse" id="navbarsExample03">
               <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                 <li class="nav-item">
-                  <a class="nav-link active ps-4" href="../index.html">Inicio</a>
+                  <a class="nav-link active ps-4" href="../index.html"
+                    >Inicio</a
+                  >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active ps-4" href="about.html"
@@ -112,47 +113,68 @@
       <div class="row">
         <div class="col-12">
           <header>
-            <p>
-              Ofertas de hasta 35% - <strong><a href="mens.html">VER AQUI</a></strong>
+            <p tabindex="0">
+              Ofertas de hasta 35% -
+              <strong><a href="mens.html">VER AQUI</a></strong>
             </p>
           </header>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-3 col-lg-2 d-none d-md-block">
+        <div
+          class="col-3 col-lg-2 d-none d-md-block"
+          aria-label="Apartado de filtros."
+          tabindex="0"
+        >
           <aside>
             <div class="container-fluid">
               <div class="row">
                 <div class="col-12">
-                  <p class="cat">Vestidos y Tacones para Damas</p>
+                  <p class="cat" tabindex="0">Vestidos y Tacones para Damas</p>
                   <p class="results">56.326 resultados</p>
 
-                  <p class="high">Categorias</p>
+                  <p class="high" tabindex="1">Categorias</p>
                   <!--  -->
-                  <p class="lav">Vestido clasico <b class="qunt">(9.677)</b></p>
-                  <p class="lav">
+                  <p class="lav" tabindex="2">
+                    Vestido clasico <b class="qunt">(9.677)</b>
+                  </p>
+                  <p class="lav" tabindex="3">
                     Vestido con cola <b class="qunt">(9.600)</b>
                   </p>
-                  <p class="lav">
+                  <p class="lav" tabindex="4">
                     Vestido asimetrico <b class="qunt">(8.846)</b>
                   </p>
-                  <p class="lav">Tacones altos <b class="qunt">(11.386)</b></p>
-                  <p class="lav">Tacones bajos <b class="qunt">(7.893)</b></p>
-                  <p class="more">Ver todos</p>
+                  <p class="lav" tabindex="5">
+                    Tacones altos <b class="qunt">(11.386)</b>
+                  </p>
+                  <p class="lav" tabindex="6">
+                    Tacones bajos <b class="qunt">(7.893)</b>
+                  </p>
+                  <p class="more" tabindex="7">Ver todos</p>
 
-                  <p class="high">Precio</p>
+                  <p class="high" tabindex="8">Precio</p>
                   <!--  -->
-                  <p class="lav">Hasta $1.000 <b class="qunt">(9.600)</b></p>
-                  <p class="lav">$1.00 a $2.500 <b class="qunt">(8.846)</b></p>
-                  <p class="lav">Mas de $2.500 <b class="qunt">(11.386)</b></p>
-                  <p class="more">Ver todos</p>
+                  <p class="lav" tabindex="9">
+                    Hasta $1.000 <b class="qunt">(9.600)</b>
+                  </p>
+                  <p class="lav" tabindex="10">
+                    $1.00 a $2.500 <b class="qunt">(8.846)</b>
+                  </p>
+                  <p class="lav" tabindex="11">
+                    Mas de $2.500 <b class="qunt">(11.386)</b>
+                  </p>
+                  <p class="more" tabindex="12">Ver todos</p>
 
-                  <p class="high">Envio</p>
+                  <p class="high" tabindex="13">Envio</p>
                   <!--  -->
-                  <p class="lav">DAC <b class="qunt">(3.200)</b></p>
-                  <p class="lav">Mirtrans <b class="qunt">(9.261)</b></p>
-                  <p class="more">Ver todos</p>
+                  <p class="lav" tabindex="14">
+                    DAC <b class="qunt">(3.200)</b>
+                  </p>
+                  <p class="lav" tabindex="15">
+                    Mirtrans <b class="qunt">(9.261)</b>
+                  </p>
+                  <p class="more" tabindex="16">Ver todos</p>
                 </div>
               </div>
             </div>
@@ -164,14 +186,17 @@
             <div class="container-fluid">
               <div class="row">
                 <div
+                  id="articlesHolder"
                   class="
                     col-12
                     d-flex
                     flex-wrap flex-row
                     justify-content-center
                   "
-                  id="articlesHolder"
+                  aria-label="Articulos en base a tus preferencias"
+                  tabindex="17"
                 >
+                  <!-- HERE GOES THE AUTO-GENERATED CARDS -->
                 </div>
               </div>
             </div>
@@ -191,46 +216,70 @@
     </div>
     <!-- end of main container -->
 
-    <button id="filter" class="d-block d-md-none" onclick="toggleFilter()">
+    <button
+      id="filter"
+      class="d-block d-md-none"
+      onclick="toggleFilter()"
+      aria-expanded="false"
+      aria-controls="filterMobile"
+    >
       <img src="../imgs/filter.svg" id="filterLogo" />
     </button>
 
     <!-- FILTER MOBILE -->
-    <div class="container-fluid" id="filterMobile" style="display: none;">
+    <div class="container-fluid" id="filterMobile" style="display: none">
       <div class="row">
-        <div class="col-12 p-2">
-          <p class="Ncat">Vestidos y Tacones para Damas</p>
+        <div class="col-12 p-2" aria-label="Apartado de filtros." tabindex="0">
+          <p class="Ncat" tabindex="1">Vestidos y Tacones para Damas</p>
           <p class="Nresults">56.326 resultados</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-12 p-2 d-flex flex-row flex-wrap gap-4">
+        <div class="col-12 p-2 d-flex flex-row flex-wrap gap-4" tabindex="">
           <div>
-            <p class="Nhigh">Categorias</p>
+            <p class="Nhigh" tabindex="2">Categorias</p>
             <!--  -->
-            <p class="Nlav">Vestido clasico <b class="Nqunt">(9.677)</b></p>
-            <p class="Nlav">Vestido con cola <b class="Nqunt">(9.600)</b></p>
-            <p class="Nlav">Vestido asimetrico <b class="Nqunt">(8.846)</b></p>
-            <p class="Nlav">Tacones altos <b class="Nqunt">(11.386)</b></p>
-            <p class="Nlav">Tacones bajos <b class="Nqunt">(7.893)</b></p>
-            <p class="Nmore">Ver todos</p>
+            <p class="Nlav" tabindex="3">
+              Vestido clasico <b class="Nqunt">(9.677)</b>
+            </p>
+            <p class="Nlav" tabindex="4">
+              Vestido con cola <b class="Nqunt">(9.600)</b>
+            </p>
+            <p class="Nlav" tabindex="5">
+              Vestido asimetrico <b class="Nqunt">(8.846)</b>
+            </p>
+            <p class="Nlav" tabindex="6">
+              Tacones altos <b class="Nqunt">(11.386)</b>
+            </p>
+            <p class="Nlav" tabindex="7">
+              Tacones bajos <b class="Nqunt">(7.893)</b>
+            </p>
+            <p class="Nmore" tabindex="8">Ver todos</p>
           </div>
 
           <div>
-            <p class="Nhigh">Precio</p>
+            <p class="Nhigh" tabindex="9">Precio</p>
             <!--  -->
-            <p class="Nlav">Hasta $1.000 <b class="Nqunt">(9.600)</b></p>
-            <p class="Nlav">$1.00 a $2.500 <b class="Nqunt">(8.846)</b></p>
-            <p class="Nlav">Mas de $2.500 <b class="Nqunt">(11.386)</b></p>
-            <p class="Nmore">Ver todos</p>
+            <p class="Nlav" tabindex="10">
+              Hasta $1.000 <b class="Nqunt">(9.600)</b>
+            </p>
+            <p class="Nlav" tabindex="11">
+              $1.000 a $2.500 <b class="Nqunt">(8.846)</b>
+            </p>
+            <p class="Nlav" tabindex="12">
+              Mas de $2.500 <b class="Nqunt">(11.386)</b>
+            </p>
+            <p class="Nmore" tabindex="13">Ver todos</p>
           </div>
 
           <div>
-            <p class="Nhigh">Envio</p>
+            <p class="Nhigh" tabindex="14">Envio</p>
             <!--  -->
-            <p class="Nlav">DAC <b class="Nqunt">(3.200)</b></p>
-            <p class="Nlav">Mirtrans <b class="Nqunt">(9.261)</b></p>
-            <p class="Nmore">Ver todos</p>
+            <p class="Nlav" tabindex="15">DAC <b class="Nqunt">(3.200)</b></p>
+            <p class="Nlav" tabindex="16">
+              Mirtrans <b class="Nqunt">(9.261)</b>
+            </p>
+            <p class="Nmore" tabindex="17">Ver todos</p>
           </div>
         </div>
       </div>
