@@ -39,6 +39,18 @@ let loadArticle = () => {
   pri.className = "artPrice";
 
   document.title = `${articulos[artId].name} - Indumentis`;
+
+
+  let currentTime = new Date();
+
+  let year = currentTime.getFullYear(); //year
+  let month = ("0" + (currentTime.getMonth() + 1)).slice(-2); //month
+  let day = ("0" + currentTime.getDate()).slice(-2); //day
+
+  let todayDate = `${year}-${month}-${day}`;
+  
+  document.querySelector("#date").setAttribute("value", todayDate);
+  document.querySelector("#date").setAttribute("min", todayDate);
 };
 
 let loadMens = () => {
